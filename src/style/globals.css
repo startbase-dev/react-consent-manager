@@ -1,15 +1,20 @@
 :root {
-  --rfe-white: #fff;
-  --rfe-white-rgb: 255 255 255;
-  --rfe-black: #000;
-  --rfe-black-rgb: 0 0 0;
+  --rcm-transparent: transparent;
+  --rcm-white: #fff;
+  --rcm-white-rgb: 255 255 255;
+  --rcm-black: #000;
+  --rcm-black-rgb: 0 0 0;
+  --rcm-primary: #007bff;
+  --rcm-primary-rgb: 0 123 255;
+  --rcm-secondary: #73fa58;
+  --rcm-secondary-rgb: 115 250 88;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --white: #000;
-    --white-rgb: 0 0 0;
-    --black: #fff;
-    --black-rgb: 255 255 255;
+    --rcm-white: #000;
+    --rcm-white-rgb: 0 0 0;
+    --rcm-black: #fff;
+    --rcm-black-rgb: 255 255 255;
   }
 }

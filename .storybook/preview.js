@@ -1,4 +1,5 @@
 import '../src/style/globals.css';
+import '@start-base/react-form-elements/index.css';
 import './storybook.css';
 
 const preview = {

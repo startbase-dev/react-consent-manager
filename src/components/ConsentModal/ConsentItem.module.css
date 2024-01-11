@@ -1,0 +1,34 @@
+.item {
+  margin: 24px 0;
+}
+
+.item:first-of-type {
+  margin-top: 0;
+}
+
+.item .title {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(var(--rcm-black-rgb) / 10%);
+  align-items: flex-end;
+  margin-bottom: 16px;
+}
+
+.item .title .label {
+  margin-bottom: 16px;
+}
+
+.item .title .mandatory {
+  margin-bottom: 16px;
+  height: 28px;
+  font-size: 14px;
+  color: var(--rcm-secondary);
+  display: flex;
+  align-items: center;
+}
+
+.item .description {
+  margin: 8px 0;
+  font-weight: normal;
+  line-height: 24px;
+}

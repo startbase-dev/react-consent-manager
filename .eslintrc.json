@@ -37,6 +37,8 @@
         "max": 1
       }
     ],
-    "no-useless-catch": 0
+    "no-useless-catch": 0,
+    "react/react-in-jsx-scope": 0,
+    "react/prop-types": 0
   }
 }
