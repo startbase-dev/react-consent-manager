@@ -90,6 +90,7 @@
   background-color: var(--rcm-white);
   color: var(--rcm-primary);
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .modal .content .footer .secondary:hover {
@@ -111,6 +112,7 @@
   background: var(--rcm-primary);
   color: var(--rcm-white);
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .modal .content .footer .primary:hover {
