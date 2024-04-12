@@ -7,12 +7,12 @@
 
 ## Introduction
 
-
 JavaScript library designed to simplify the management of user consents in web applications developed with React. This package is particularly useful for complying with data protection regulations such as the General Data Protection Regulation (GDPR) in the European Union and the California Consumer Privacy Act (CCPA) in the United States. It provides developers with a flexible and easy-to-integrate solution to handle user consents for cookies, tracking scripts, and other third-party services that require user approval before activation.
 
 With this package, developers can create customizable consent banners or dialogs that inform users about the use of cookies and trackers, allowing users to accept, reject, or select specific preferences. The library ensures that consents are properly stored and retrieved, making sure that only approved services are executed. This not only helps in enhancing user trust by respecting their privacy choices but also aids in legal compliance by documenting consents accurately.
 
 The package offers features such as consent grouping for different categories of services (e.g., analytics, marketing), This makes this package a comprehensive solution for consent management in modern web applications built with React.
+
 - CSS variables for theming are available for all components.
 - Classnames are available for all components.
 - Built-in dark mode support.
@@ -75,7 +75,7 @@ const ConsentProvider = ({ children }) => {
                   window.dataLayer = window.dataLayer || [];
                   function gtag(){dataLayer.push(arguments);}
                   gtag('js', new Date());
-                
+
                   gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}');
                 `,
               },
