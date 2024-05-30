@@ -21,19 +21,19 @@ The package offers features such as consent grouping for different categories of
 
 To install, you can use [npm](https://npmjs.org/) or [yarn](https://yarnpkg.com):
 
-```bash:Terminal
+```bash title="Terminal"
     $ npm install --save @start-base/react-consent-manager
 ```
 
 or
 
-```bash:Terminal
+```bash title="Terminal"
     $ yarn add @start-base/react-consent-manager
 ```
 
 Make sure to add css file to your app root file
 
-```jsx:layout.js
+```jsx title="layout.js"
 import '@start-base/react-consent-manager/dist/lib/index.css';
 ```
 
@@ -41,7 +41,7 @@ import '@start-base/react-consent-manager/dist/lib/index.css';
 
 In the first place you need to wrap your app with `ConsentProvider` and pass the services you want to manage. Here's an example of how to use the `ConsentProvider`:
 
-```jsx:ConsentProvider.js
+```jsx title="ConsentProvider.js"
 'use client';
 
 import { ConsentProvider as Provider } from '@start-base/react-consent-manager';
@@ -104,7 +104,7 @@ export default ConsentProvider;
 
 Then you can use the `ConsentBanner` component to display a consent banner or dialog to the user. Here's an example of how to use the `ConsentBanner`:
 
-```jsx:Banner.js
+```jsx title="Banner.js"
 'use client';
 
 import { ConsentBanner } from '@start-base/react-consent-manager';
@@ -143,7 +143,7 @@ export default function Banner() {
 
 Then need towrap your layout with `ConsentProvider` and put `ConsentBanner` component. Here's an example of how to use the `ConsentProvider` and `ConsentBanner` together:
 
-```jsx:layout.js
+```jsx title="layout.js"
 import { Inter } from 'next/font/google';
 
 import ConsentBanner from '@/components/ConsentBanner';
@@ -173,7 +173,7 @@ export default async function Layout({ children }) {
 
 You can use CSS variables to customize the look and feel of the components. Here's a list of all available variables:
 
-```css:global.css
+```css title="global.css"
   --rcm-transparent: transparent;
   --rcm-white: #fff;
   --rcm-white-rgb: 255 255 255;
