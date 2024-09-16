@@ -42,8 +42,21 @@ const Template: React.FC = () => {
   };
 
   return (
-    <>
+    <div className={"dark"}>
       <button onClick={() => localStorage.clear()}>Clear</button>
+      <button
+        onClick={() => {
+          if (document.body.classList.contains("dark")) {
+            document.body.classList.remove("dark");
+            document.body.classList.add("light");
+          } else {
+            document.body.classList.remove("light");
+            document.body.classList.add("dark");
+          }
+        }}
+      >
+        Dark/Light
+      </button>
       <ConsentProvider options={consentOptions}>
         <ConsentBanner
           decline={{ hidden: false, label: "Reject Optionals" }}
@@ -69,7 +82,7 @@ const Template: React.FC = () => {
           </p>
         </ConsentBanner>
       </ConsentProvider>
-    </>
+    </div>
   );
 };
 

@@ -17,8 +17,8 @@
     height: calc(100% - 12px);
     transition: all 0.3s ease;
     border-radius: 8px;
-    background-color: var(--rcm-white);
-    color: var(--rcm-black);
+    background-color: var(--rcm-modal-bg);
+    color: var(--rcm-text-color);
     box-shadow:
       0 0 0 1px rgba(0 0 0 / 10%),
       0 2px 4px rgba(0 0 0 / 10%),
@@ -30,7 +30,7 @@
       padding: 24px;
 
       h1 {
-        margin: 0 0 12px;
+        margin: 0 0 16px;
       }
     }
 
@@ -56,7 +56,7 @@
         background: linear-gradient(
           180deg,
           var(--rcm-transparent) 0%,
-          var(--rcm-white) 100%
+          var(--rcm-modal-bg) 100%
         );
         position: absolute;
         bottom: calc(100% - 1px);
@@ -72,29 +72,29 @@
         font-weight: 300;
         margin: 0;
         padding: 8px 32px;
-        border-radius: 2px;
+        border-radius: var(--rcm-border-radius);
         transition: all 0.3s ease;
         cursor: pointer;
         white-space: nowrap;
       }
 
       .secondary {
-        border: 2px solid var(--rcm-primary);
-        background-color: var(--rcm-white);
-        color: var(--rcm-primary);
+        border: 2px solid var(--rcm-button-secondary-border);
+        background-color: var(--rcm-button-secondary-bg);
+        color: var(--rcm-button-secondary-text-color);
 
         &:hover {
-          background-color: rgba(var(--rcm-black-rgb) / 10%);
+          background-color: var(--rcm-button-secondary-bg-hover);
         }
       }
 
       .primary {
-        border: 2px solid var(--rcm-primary);
-        background: var(--rcm-primary);
-        color: var(--rcm-white);
+        border: px solid var(--rcm-button-primary-border);
+        background: var(--rcm-button-primary-bg);
+        color: var(--rcm-button-primary-text-color);
 
         &:hover {
-          background-color: rgba(var(--rcm-primary-rgb) / 80%);
+          background-color: var(--rcm-button-primary-bg-hover);
           border-color: var(--rcm-transparent);
         }
       }

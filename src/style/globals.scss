@@ -1,21 +1,26 @@
 .light,
 :root,
 [data-theme="light"] {
+  --rcm-border-radius: 6px;
   --rcm-transparent: transparent;
-  --rcm-white: #fff;
-  --rcm-white-rgb: 255 255 255;
-  --rcm-black: #000;
-  --rcm-black-rgb: 0 0 0;
-  --rcm-primary: #007bff;
-  --rcm-primary-rgb: 0 123 255;
-  --rcm-secondary: #73fa58;
-  --rcm-secondary-rgb: 115 250 88;
+  --rcm-text-color: #000;
+  --rcm-button-primary-bg: #000;
+  --rcm-button-primary-border: #000;
+  --rcm-button-primary-text-color: #fff;
+  --rcm-button-primary-bg-hover: #222;
+  --rcm-button-secondary-bg: #fff;
+  --rcm-button-secondary-border: #eee;
+  --rcm-button-secondary-text-color: #000;
+  --rcm-button-secondary-bg-hover: #eee;
+  --rcm-banner-bg: #ebd2ff;
+  --rcm-modal-bg: #fff6d2;
+  --rcm-necessary-text-color: #00e317;
+  --rcm-consent-item-border: #d6d6d6;
 }
 
 .dark,
 [data-theme="dark"] {
-  --rcm-white: #000;
-  --rcm-white-rgb: 0 0 0;
-  --rcm-black: #fff;
-  --rcm-black-rgb: 255 255 255;
+  --rcm-text-color: #fff;
+  --rcm-banner-bg: #59019c;
+  --rcm-modal-bg: #0c3761;
 }

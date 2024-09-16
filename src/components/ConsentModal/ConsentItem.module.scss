@@ -8,7 +8,7 @@
   .title {
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid rgba(var(--rcm-black-rgb) / 10%);
+    border-bottom: 1px solid var(--rcm-consent-item-border);
     align-items: flex-end;
     margin-bottom: 16px;
 
@@ -20,7 +20,8 @@
     .mandatory {
       height: 28px;
       font-size: 14px;
-      color: var(--rcm-secondary);
+      font-weight: bold;
+      color: var(--rcm-necessary-text-color);
       display: flex;
       align-items: center;
     }

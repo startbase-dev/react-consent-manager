@@ -17,6 +17,7 @@
     "prettier",
     "plugin:storybook/recommended"
   ],
+
   "plugins": ["@typescript-eslint", "compat", "prettier", "css-modules"],
   "parserOptions": {
     "ecmaFeatures": {

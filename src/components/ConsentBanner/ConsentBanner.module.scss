@@ -5,10 +5,9 @@
   right: 0;
   bottom: 0;
   left: 0;
-  width: 100%;
   padding: 36px;
   transition: all 0.3s ease;
-  background-color: var(--rcm-white);
+  background-color: var(--rcm-banner-bg);
   box-shadow: rgb(0 0 0 / 10%) 0 -8px 8px 0;
 
   .content {
@@ -16,14 +15,15 @@
     display: flex;
     margin: auto;
     justify-content: space-between;
+    gap: 16px;
 
     .message {
       transition: all 0.3s ease;
-      color: var(--rcm-black);
+      color: var(--rcm-text-color);
 
       a {
         transition: all 0.3s ease;
-        color: var(--rcm-black);
+        color: var(--rcm-text-color);
         font-weight: bold;
         text-decoration: none;
       }
@@ -55,15 +55,15 @@
       padding: 8px 32px;
       margin: 0;
       white-space: nowrap;
-      border-radius: 2px;
+      border-radius: var(--rcm-border-radius);
       transition: all 0.3s ease;
-      border: 2px solid var(--rcm-primary);
-      background-color: var(--rcm-white);
-      color: var(--rcm-primary);
+      border: 1px solid var(--rcm-button-secondary-border);
+      background-color: var(--rcm-button-secondary-bg);
+      color: var(--rcm-button-secondary-text-color);
       cursor: pointer;
 
       &:hover {
-        background-color: rgb(var(--rcm-black-rgb) 0.1);
+        background-color: var(--rcm-button-secondary-bg-hover);
       }
     }
 
@@ -77,15 +77,15 @@
       margin: 0;
       white-space: nowrap;
       padding: 8px 32px;
-      border-radius: 2px;
+      border-radius: var(--rcm-border-radius);
       transition: all 0.3s ease;
-      border: 2px solid var(--rcm-primary-rgb);
-      background: var(--rcm-primary);
-      color: var(--rcm-white);
+      border: 1px solid var(--rcm-button-primary-border);
+      background-color: var(--rcm-button-primary-bg);
+      color: var(--rcm-button-primary-text-color);
       cursor: pointer;
 
       &:hover {
-        background-color: rgb(var(--rcm-primary-rgb) 0.8);
+        background-color: var(--rcm-button-primary-bg-hover);
         border-color: var(--rcm-transparent);
       }
     }
