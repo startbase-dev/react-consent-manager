@@ -99,7 +99,6 @@ const ConsentProvider = ({ children }) => {
 };
 
 export default ConsentProvider;
-
 ```
 
 Then you can use the `ConsentBanner` component to display a consent banner or dialog to the user. Here's an example of how to use the `ConsentBanner`:
@@ -157,10 +156,10 @@ export default async function Layout({ children }) {
   return (
     <ConsentProvider>
       <html lang="en">
-          <body className={inter.className}>
-            {children}
-            <ConsentBanner />
-          </body>
+        <body className={inter.className}>
+          {children}
+          <ConsentBanner />
+        </body>
       </html>
     </ConsentProvider>
   );
@@ -174,15 +173,15 @@ export default async function Layout({ children }) {
 You can use CSS variables to customize the look and feel of the components. Here's a list of all available variables:
 
 ```css title="global.css"
-  --rcm-transparent: transparent;
-  --rcm-white: #fff;
-  --rcm-white-rgb: 255 255 255;
-  --rcm-black: #000;
-  --rcm-black-rgb: 0 0 0;
-  --rcm-primary: #007bff;
-  --rcm-primary-rgb: 0 123 255;
-  --rcm-secondary: #73fa58;
-  --rcm-secondary-rgb: 115 250 88;
+--rcm-transparent: transparent;
+--rcm-white: #fff;
+--rcm-white-rgb: 255 255 255;
+--rcm-black: #000;
+--rcm-black-rgb: 0 0 0;
+--rcm-primary: #007bff;
+--rcm-primary-rgb: 0 123 255;
+--rcm-secondary: #73fa58;
+--rcm-secondary-rgb: 115 250 88;
 ```
 
 ## Demos

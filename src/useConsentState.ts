@@ -5,10 +5,11 @@ import { getFromLocalStorage } from './lib/storage/localStorage/get';
 import { isValidInLocalStorage } from './lib/storage/localStorage/valid';
 import { updateConsents } from './lib/updateConsents';
 
-import MD5 from './lib/md5';
+import MD5 from 'md5';
+import { ConsentState, Options, Service } from './types';
 
-function useConsentState(options) {
-  const [state, setState] = useState({
+function useConsentState(options: Options) {
+  const [state, setState] = useState<ConsentState>({
     consent: [],
     isBannerVisible: false,
     isDetailsVisible: false,
@@ -18,8 +19,8 @@ function useConsentState(options) {
   useEffect(() => {
     if (!isValidInLocalStorage(state.hash)) {
       const consent = options.services
-        .filter((service) => service?.mandatory)
-        .map((service) => service.id);
+        .filter((service: Service) => service.mandatory)
+        .map((service: Service) => service.id);
 
       setState((state) => ({
         ...state,
@@ -41,14 +42,14 @@ function useConsentState(options) {
       isDetailsVisible,
     }));
 
-    const approvedServices = options.services.filter((service) =>
+    const approvedServices = options.services.filter((service: Service) =>
       consent.includes(service.id)
     );
     addServices(approvedServices);
   }, [options.services, state.hash]);
 
   const setConsent = useCallback(
-    (consent) => {
+    (consent: string[]) => {
       setState((state) => ({ ...state, consent, isBannerVisible: false }));
       updateConsents(options, consent, state.hash);
     },
@@ -56,7 +57,7 @@ function useConsentState(options) {
   );
 
   const hasConsent = useCallback(
-    (id) => state.consent.includes(id),
+    (id: string) => state.consent.includes(id),
     [state.consent]
   );
 

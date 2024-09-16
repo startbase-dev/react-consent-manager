@@ -1,8 +1,12 @@
 import React from 'react';
 import { Provider } from './ConsentContext';
 import useConsentState from './useConsentState';
+import { ConsentProviderProps } from './types';
 
-function ConsentProvider({ options, children }) {
+function ConsentProvider({
+  options,
+  children,
+}: Readonly<ConsentProviderProps>) {
   const {
     consent,
     hasConsent,

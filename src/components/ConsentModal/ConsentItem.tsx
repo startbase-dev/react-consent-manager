@@ -1,26 +1,25 @@
 import React, { useCallback, useState } from 'react';
 
 import useConsent from '../../useConsent';
-import style from './ConsentItem.module.css';
+import style from './ConsentItem.module.scss';
+import { ConsentItemProps } from '../../types';
 
 function ConsentItem({
   onChange,
   id,
   name,
   description,
-  mandatory,
-  switchComponent,
-}) {
+  mandatory = false,
+  switchComponent: SwitchComponent,
+}: Readonly<ConsentItemProps>) {
   const { consent } = useConsent();
-  const SwitchComponent = switchComponent;
-
   const [consentCheck, setConsentCheck] = useState(consent.includes(id));
 
   const handleChange = useCallback(
-    (e) => {
-      const { name, value, type, checked } = e.target;
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      const { name, type, checked } = e.target;
       setConsentCheck((prevState) =>
-        type === 'checkbox' ? !prevState : value
+        type === 'checkbox' ? !prevState : prevState
       );
       onChange(name, checked);
     },

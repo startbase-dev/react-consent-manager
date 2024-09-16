@@ -2,8 +2,13 @@ import { saveToLocalStorage } from './storage/localStorage/save';
 
 import { addServices } from './addServices';
 import { removeServices } from './removeServices';
+import { Options } from '../types';
 
-export function updateConsents(options, consent, hash) {
+export function updateConsents(
+  options: Options,
+  consent: string[],
+  hash: string
+): void {
   const removedServices = options.services.filter(
     (service) => !consent.includes(service.id)
   );

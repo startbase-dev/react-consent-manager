@@ -1,4 +1,4 @@
-export function addCodeScript(code, elementId) {
+export function addCodeScript(code: string, elementId: string): void {
   const element = document.createElement('script');
   element.id = elementId;
   element.innerHTML = code;

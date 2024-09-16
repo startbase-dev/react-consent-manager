@@ -1,6 +1,6 @@
 import { useContext } from 'react';
-
 import ConsentContext from './ConsentContext';
+import { ConsentContextState } from './types';
 
 function useConsent() {
   const {
@@ -12,7 +12,7 @@ function useConsent() {
     toggleConsentModal,
     setConsent,
     options,
-  } = useContext(ConsentContext);
+  } = useContext<ConsentContextState>(ConsentContext);
 
   return {
     consent,

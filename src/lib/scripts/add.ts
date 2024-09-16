@@ -2,8 +2,9 @@ import { addCodeScript } from './add/codeScript';
 import { addExternalScript } from './add/externalScript';
 import { isScriptCode } from './isScriptCode';
 import { isScriptExternal } from './isScriptExternal';
+import { Script } from '../../types';
 
-export function addScripts(serviceId, scripts) {
+export function addScripts(serviceId: string, scripts?: Script[]): void {
   if (!scripts) {
     return;
   }
@@ -17,11 +18,11 @@ export function addScripts(serviceId, scripts) {
     }
 
     if (isScriptExternal(script)) {
-      addExternalScript(script.src, elementId);
+      addExternalScript(script.src as string, elementId);
     }
 
     if (isScriptCode(script)) {
-      addCodeScript(script.code, elementId);
+      addCodeScript(script.code as string, elementId);
     }
   }
 }

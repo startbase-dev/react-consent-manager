@@ -1,4 +1,7 @@
-export function removeScripts(serviceId, scripts) {
+export function removeScripts(
+  serviceId: string,
+  scripts?: { id: string }[]
+): void {
   if (!scripts) {
     return;
   }
