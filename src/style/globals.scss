@@ -1,6 +1,7 @@
 .light,
 :root,
 [data-theme="light"] {
+  background: white;
   --rcm-border-radius: 6px;
   --rcm-transparent: transparent;
   --rcm-text-color: #000;
@@ -20,6 +21,7 @@
 
 .dark,
 [data-theme="dark"] {
+  background: black;
   --rcm-text-color: #fff;
   --rcm-banner-bg: #59019c;
   --rcm-modal-bg: #0c3761;
