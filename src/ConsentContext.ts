@@ -1,5 +1,5 @@
-import { createContext } from 'react';
-import { ConsentContextState } from './types';
+import { createContext } from "react";
+import { ConsentContextState } from "./types";
 
 const initialContextState: ConsentContextState = {
   consent: [],

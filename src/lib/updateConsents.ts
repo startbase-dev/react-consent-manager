@@ -1,19 +1,19 @@
-import { saveToLocalStorage } from './storage/localStorage/save';
+import { saveToLocalStorage } from "./storage/localStorage/save";
 
-import { addServices } from './addServices';
-import { removeServices } from './removeServices';
-import { Options } from '../types';
+import { addServices } from "./addServices";
+import { removeServices } from "./removeServices";
+import { Options } from "../types";
 
 export function updateConsents(
   options: Options,
   consent: string[],
-  hash: string
+  hash: string,
 ): void {
   const removedServices = options.services.filter(
-    (service) => !consent.includes(service.id)
+    (service) => !consent.includes(service.id),
   );
   const addedServices = options.services.filter((service) =>
-    consent.includes(service.id)
+    consent.includes(service.id),
   );
 
   removeServices(removedServices);

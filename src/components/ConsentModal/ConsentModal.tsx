@@ -1,16 +1,15 @@
-import React, { useCallback } from 'react';
+import React, { useCallback } from "react";
 
-import useConsent from '../../useConsent';
-import useConsentBannerActions from '../../useConsentBannerActions';
-import useSelectedServices from '../../useSelectedServices';
-import ConsentItem from './ConsentItem';
-import style from './ConsentModal.module.scss';
-import { ConsentModalProps } from '../../types';
+import useConsent from "../../useConsent";
+import useConsentBannerActions from "../../useConsentBannerActions";
+import useSelectedServices from "../../useSelectedServices";
+import ConsentItem from "./ConsentItem";
+import style from "./ConsentModal.module.scss";
+import { ConsentModalProps } from "../../types";
 
 function ConsentModal({
   onToggle = () => ({}),
   modal,
-  switchComponent,
 }: Readonly<ConsentModalProps>) {
   const {
     options: { services },
@@ -52,7 +51,6 @@ function ConsentModal({
               mandatory={mandatory}
               onChange={handleSelectedServiceChange}
               key={id}
-              switchComponent={switchComponent}
             />
           ))}
         </div>
@@ -60,14 +58,14 @@ function ConsentModal({
           <span className={style.shadow}></span>
           {!modal.decline?.hidden && (
             <button className={style.secondary} onClick={handleDecline}>
-              {modal.decline?.label || 'Reject All'}
+              {modal.decline?.label || "Reject All"}
             </button>
           )}
           <button className={style.secondary} onClick={handleApproveSelected}>
-            {modal.approve?.label || 'Save My Preferences'}
+            {modal.approve?.label || "Save My Preferences"}
           </button>
           <button className={style.primary} onClick={handleApproveAll}>
-            {modal.approveAll?.label || 'Accept All'}
+            {modal.approveAll?.label || "Accept All"}
           </button>
         </div>
       </div>

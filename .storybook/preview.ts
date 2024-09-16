@@ -1,10 +1,9 @@
-import '../src/style/globals.css';
-import '@start-base/react-form-elements/index.css';
-import './storybook.css';
+import "../src/style/globals.scss";
+import "./storybook.scss";
 
 const preview = {
   parameters: {
-    actions: { argTypesRegex: '^on[A-Z].*' },
+    backgrounds: { disable: true },
     controls: {
       matchers: {
         color: /(background|color)$/i,
@@ -12,6 +11,8 @@ const preview = {
       },
     },
   },
+
+  tags: ["autodocs"],
 };
 
 export default preview;

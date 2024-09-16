@@ -1,6 +1,6 @@
-import { useContext } from 'react';
-import ConsentContext from './ConsentContext';
-import { ConsentContextState } from './types';
+import { useContext } from "react";
+import ConsentContext from "./ConsentContext";
+import { ConsentContextState } from "./types";
 
 function useConsent() {
   const {

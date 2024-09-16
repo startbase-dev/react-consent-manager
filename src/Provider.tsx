@@ -1,7 +1,7 @@
-import React from 'react';
-import { Provider } from './ConsentContext';
-import useConsentState from './useConsentState';
-import { ConsentProviderProps } from './types';
+import React from "react";
+import { Provider } from "./ConsentContext";
+import useConsentState from "./useConsentState";
+import { ConsentProviderProps } from "./types";
 
 function ConsentProvider({
   options,

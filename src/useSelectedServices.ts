@@ -1,5 +1,5 @@
-import { useCallback, useState } from 'react';
-import useConsent from './useConsent';
+import { useCallback, useState } from "react";
+import useConsent from "./useConsent";
 
 function useSelectedServices() {
   const { consent } = useConsent();
@@ -14,7 +14,7 @@ function useSelectedServices() {
           : services.filter((item) => item !== service);
       });
     },
-    []
+    [],
   );
 
   return { selectedServices, handleSelectedServiceChange };

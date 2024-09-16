@@ -1,4 +1,6 @@
-:root {
+.light,
+:root,
+[data-theme="light"] {
   --rcm-transparent: transparent;
   --rcm-white: #fff;
   --rcm-white-rgb: 255 255 255;
@@ -10,11 +12,10 @@
   --rcm-secondary-rgb: 115 250 88;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --rcm-white: #000;
-    --rcm-white-rgb: 0 0 0;
-    --rcm-black: #fff;
-    --rcm-black-rgb: 255 255 255;
-  }
+.dark,
+[data-theme="dark"] {
+  --rcm-white: #000;
+  --rcm-white-rgb: 0 0 0;
+  --rcm-black: #fff;
+  --rcm-black-rgb: 255 255 255;
 }

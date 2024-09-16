@@ -1,12 +1,12 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from "react";
 
-import { addServices } from './lib/addServices';
-import { getFromLocalStorage } from './lib/storage/localStorage/get';
-import { isValidInLocalStorage } from './lib/storage/localStorage/valid';
-import { updateConsents } from './lib/updateConsents';
+import { addServices } from "./lib/addServices";
+import { getFromLocalStorage } from "./lib/storage/localStorage/get";
+import { isValidInLocalStorage } from "./lib/storage/localStorage/valid";
+import { updateConsents } from "./lib/updateConsents";
 
-import MD5 from 'md5';
-import { ConsentState, Options, Service } from './types';
+import MD5 from "md5";
+import { ConsentState, Options, Service } from "./types";
 
 function useConsentState(options: Options) {
   const [state, setState] = useState<ConsentState>({
@@ -32,7 +32,7 @@ function useConsentState(options: Options) {
     }
 
     const { consent, isBannerVisible, isDetailsVisible } = getFromLocalStorage(
-      state.hash
+      state.hash,
     );
 
     setState((state) => ({
@@ -43,7 +43,7 @@ function useConsentState(options: Options) {
     }));
 
     const approvedServices = options.services.filter((service: Service) =>
-      consent.includes(service.id)
+      consent.includes(service.id),
     );
     addServices(approvedServices);
   }, [options.services, state.hash]);
@@ -53,12 +53,12 @@ function useConsentState(options: Options) {
       setState((state) => ({ ...state, consent, isBannerVisible: false }));
       updateConsents(options, consent, state.hash);
     },
-    [options, state.hash]
+    [options, state.hash],
   );
 
   const hasConsent = useCallback(
     (id: string) => state.consent.includes(id),
-    [state.consent]
+    [state.consent],
   );
 
   const toggleConsentBanner = useCallback(() => {

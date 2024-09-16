@@ -1,7 +1,7 @@
-import { useCallback } from 'react';
+import { useCallback } from "react";
 
-import useConsent from './useConsent';
-import { Service } from './types';
+import useConsent from "./useConsent";
+import { Service } from "./types";
 
 function useConsentBannerActions() {
   const {
@@ -13,14 +13,14 @@ function useConsentBannerActions() {
     (approved?: string[]) => {
       setConsent(approved || services.map(({ id }: Service) => id));
     },
-    [services, setConsent]
+    [services, setConsent],
   );
 
   const onDecline = useCallback(() => {
     setConsent(
       services
         .filter(({ mandatory }: Service) => mandatory)
-        .map(({ id }: Service) => id)
+        .map(({ id }: Service) => id),
     );
   }, [services, setConsent]);
 

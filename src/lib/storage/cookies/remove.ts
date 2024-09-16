@@ -1,4 +1,4 @@
-import { Cookie } from '../../../types';
+import { Cookie } from "../../../types";
 
 export function removeCookies(cookies?: Cookie[]): void {
   if (cookies) {

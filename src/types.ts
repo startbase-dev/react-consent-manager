@@ -1,16 +1,4 @@
-import {
-  Dispatch,
-  ReactNode,
-  SetStateAction,
-  ComponentType,
-  ChangeEvent,
-} from 'react';
-
-export interface SwitchComponentProps {
-  name: string;
-  checked: boolean;
-  onChange: (e: ChangeEvent<HTMLInputElement>) => void;
-}
+import { Dispatch, ReactNode, SetStateAction } from "react";
 
 export interface ConsentProviderProps {
   options: Options;
@@ -26,9 +14,10 @@ export interface Options {
 }
 
 export interface Script {
-  id: string;
+  id?: string;
   src?: string;
   code?: string;
+  async?: boolean;
 }
 
 export interface Service {
@@ -36,6 +25,7 @@ export interface Service {
   name: string;
   description?: string;
   mandatory: boolean;
+  scripts: Script[];
 }
 
 export interface ConsentState {
@@ -62,7 +52,6 @@ export interface ConsentItemProps {
   name: string;
   description?: string;
   mandatory?: boolean;
-  switchComponent: ComponentType<SwitchComponentProps>;
 }
 
 export interface ModalConfig {
@@ -73,9 +62,11 @@ export interface ModalConfig {
     label?: string;
   };
   approve?: {
+    hidden?: boolean;
     label?: string;
   };
   approveAll?: {
+    hidden?: boolean;
     label?: string;
   };
 }
@@ -83,7 +74,6 @@ export interface ModalConfig {
 export interface ConsentModalProps {
   onToggle?: () => void;
   modal: ModalConfig;
-  switchComponent: ComponentType<SwitchComponentProps>;
 }
 
 export interface ConsentBannerProps {
@@ -95,10 +85,16 @@ export interface ConsentBannerProps {
   };
   approve?: {
     label?: string;
+    hidden?: boolean;
   };
   decline?: {
     hidden?: boolean;
     label?: string;
   };
-  switchComponent: ComponentType<SwitchComponentProps>;
+}
+
+export interface SwitchProps {
+  name: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  checked?: boolean;
 }

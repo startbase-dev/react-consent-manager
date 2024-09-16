@@ -1,8 +1,8 @@
-import { addCodeScript } from './add/codeScript';
-import { addExternalScript } from './add/externalScript';
-import { isScriptCode } from './isScriptCode';
-import { isScriptExternal } from './isScriptExternal';
-import { Script } from '../../types';
+import { addCodeScript } from "./add/codeScript";
+import { addExternalScript } from "./add/externalScript";
+import { isScriptCode } from "./isScriptCode";
+import { isScriptExternal } from "./isScriptExternal";
+import { Script } from "../../types";
 
 export function addScripts(serviceId: string, scripts?: Script[]): void {
   if (!scripts) {

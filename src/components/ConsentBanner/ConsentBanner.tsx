@@ -1,16 +1,15 @@
-import React from 'react';
-import ConsentModal from '../ConsentModal/ConsentModal';
-import useConsent from '../../useConsent';
-import useConsentBannerActions from '../../useConsentBannerActions';
-import style from './ConsentBanner.module.scss';
-import { ConsentBannerProps } from '../../types';
+import React from "react";
+import ConsentModal from "../ConsentModal/ConsentModal";
+import useConsent from "../../useConsent";
+import useConsentBannerActions from "../../useConsentBannerActions";
+import style from "./ConsentBanner.module.scss";
+import { ConsentBannerProps } from "../../types";
 
 function ConsentBanner({
   children,
   settings,
   approve,
   decline,
-  switchComponent,
 }: Readonly<ConsentBannerProps>) {
   const { isBannerVisible, isDetailsVisible, toggleConsentModal } =
     useConsent();
@@ -28,16 +27,16 @@ function ConsentBanner({
                   className={style.secondary}
                   onClick={toggleConsentModal}
                 >
-                  {settings?.label || 'Customize'}
+                  {settings?.label || "Customize"}
                 </button>
               )}
               {!decline?.hidden && (
                 <button className={style.secondary} onClick={onDecline}>
-                  {decline?.label || 'Decline'}
+                  {decline?.label || "Decline"}
                 </button>
               )}
               <button className={style.primary} onClick={() => onApprove()}>
-                {approve?.label || 'Accept'}
+                {approve?.label || "Accept"}
               </button>
             </div>
           </div>
@@ -47,8 +46,7 @@ function ConsentBanner({
       {isDetailsVisible && (
         <ConsentModal
           onToggle={toggleConsentModal}
-          modal={settings?.modal || { title: '', description: '' }}
-          switchComponent={switchComponent}
+          modal={settings?.modal || { title: "", description: "" }}
         />
       )}
     </>

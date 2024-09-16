@@ -41,4 +41,9 @@ package-lock.json
 /storybook-static
 
 # dist
-/dist
+index.css
+index.d.mts
+index.d.ts
+index.js
+index.mjs
+styles.css

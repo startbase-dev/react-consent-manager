@@ -1,5 +1,5 @@
 export function isValidInLocalStorage(hash: string): boolean {
-  const item = localStorage.getItem('cookie-consent');
+  const item = localStorage.getItem("cookie-consent");
 
   if (!item) {
     return false;

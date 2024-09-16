@@ -6,116 +6,109 @@
   align-items: center;
   justify-content: center;
   font-size: 14px;
-}
 
-.modal .content {
-  display: grid;
-  box-sizing: border-box;
-  grid-template-rows: min-content auto min-content;
-  width: calc(100% - 12px);
-  max-width: 720px;
-  max-height: 640px;
-  height: calc(100% - 12px);
-  transition: all 0.3s ease;
-  border-radius: 8px;
-  background-color: var(--rcm-white);
-  color: var(--rcm-black);
-  box-shadow:
-    0 0 0 1px rgba(0 0 0 / 10%),
-    0 2px 4px rgba(0 0 0 / 10%),
-    0 8px 24px rgba(0 0 0 / 10%),
-    rgba(0 0 0 / 10%) 0 32px 32px 0;
-  padding: 24px;
-}
+  .content {
+    display: grid;
+    box-sizing: border-box;
+    grid-template-rows: min-content auto min-content;
+    width: calc(100% - 12px);
+    max-width: 720px;
+    max-height: 640px;
+    height: calc(100% - 12px);
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    background-color: var(--rcm-white);
+    color: var(--rcm-black);
+    box-shadow:
+      0 0 0 1px rgba(0 0 0 / 10%),
+      0 2px 4px rgba(0 0 0 / 10%),
+      0 8px 24px rgba(0 0 0 / 10%),
+      rgba(0 0 0 / 10%) 0 32px 32px 0;
+    padding: 24px;
 
-.modal .content .header {
-  padding: 24px;
-}
+    .header {
+      padding: 24px;
 
-.modal .content .header h1 {
-  margin: 0 0 12px;
-}
+      h1 {
+        margin: 0 0 12px;
+      }
+    }
 
-.modal .content .main {
-  padding: 0 24px;
-  overflow-y: auto;
-  transition: all 0.3s ease;
-}
+    .main {
+      padding: 0 24px;
+      overflow-y: auto;
+      transition: all 0.3s ease;
+    }
 
-.modal .content .footer {
-  padding: 24px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 12px;
-  position: relative;
-  justify-content: space-between;
-}
-@media (max-width: 992px) {
-  .modal .content .footer {
-    flex-direction: column;
-    align-items: flex-start;
+    .footer {
+      padding: 24px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 12px;
+      position: relative;
+      justify-content: space-between;
+
+      .shadow {
+        display: block;
+        width: calc(100% - 48px);
+        height: 40px;
+        background: linear-gradient(
+          180deg,
+          var(--rcm-transparent) 0%,
+          var(--rcm-white) 100%
+        );
+        position: absolute;
+        bottom: calc(100% - 1px);
+      }
+
+      .secondary,
+      .primary {
+        height: 44px;
+        flex: auto;
+        font-size: 14px;
+        font-family: inherit;
+        line-height: 24px;
+        font-weight: 300;
+        margin: 0;
+        padding: 8px 32px;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        white-space: nowrap;
+      }
+
+      .secondary {
+        border: 2px solid var(--rcm-primary);
+        background-color: var(--rcm-white);
+        color: var(--rcm-primary);
+
+        &:hover {
+          background-color: rgba(var(--rcm-black-rgb) / 10%);
+        }
+      }
+
+      .primary {
+        border: 2px solid var(--rcm-primary);
+        background: var(--rcm-primary);
+        color: var(--rcm-white);
+
+        &:hover {
+          background-color: rgba(var(--rcm-primary-rgb) / 80%);
+          border-color: var(--rcm-transparent);
+        }
+      }
+    }
+
+    @media (max-width: 992px) {
+      .footer {
+        flex-direction: column;
+        align-items: flex-start;
+
+        button {
+          width: 100%;
+        }
+      }
+    }
   }
-
-  .modal .content .footer button {
-    width: 100%;
-  }
-}
-
-.modal .content .footer .shadow {
-  display: block;
-  width: calc(100% - 48px);
-  height: 40px;
-  background: linear-gradient(
-    180deg,
-    var(--rcm-transparent) 0%,
-    var(--rcm-white) 100%
-  );
-  position: absolute;
-  bottom: calc(100% - 1px);
-}
-
-.modal .content .footer .secondary {
-  height: 44px;
-  flex: auto;
-  font-size: 14px;
-  font-family: inherit;
-  line-height: 24px;
-  font-weight: 300;
-  padding: 8px 32px;
-  margin: 0;
-  border-radius: 2px;
-  transition: all 0.3s ease;
-  border: 2px solid var(--rcm-primary);
-  background-color: var(--rcm-white);
-  color: var(--rcm-primary);
-  cursor: pointer;
-  white-space: nowrap;
-}
-
-.modal .content .footer .secondary:hover {
-  background-color: rgba(var(--rcm-black-rgb) / 10%);
-}
-
-.modal .content .footer .primary {
-  height: 44px;
-  flex: auto;
-  font-size: 14px;
-  font-family: inherit;
-  line-height: 24px;
-  font-weight: 300;
-  margin: 0;
-  padding: 8px 32px;
-  border-radius: 2px;
-  transition: all 0.3s ease;
-  border: 2px solid var(--rcm-primary);
-  background: var(--rcm-primary);
-  color: var(--rcm-white);
-  cursor: pointer;
-  white-space: nowrap;
-}
-
-.modal .content .footer .primary:hover {
-  background-color: rgba(var(--rcm-primary-rgb) / 80%);
-  border-color: var(--rcm-transparent);
 }

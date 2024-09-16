@@ -1,8 +1,9 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useState } from "react";
 
-import useConsent from '../../useConsent';
-import style from './ConsentItem.module.scss';
-import { ConsentItemProps } from '../../types';
+import useConsent from "../../useConsent";
+import style from "./ConsentItem.module.scss";
+import { ConsentItemProps } from "../../types";
+import Switch from "../Switch/Switch";
 
 function ConsentItem({
   onChange,
@@ -10,7 +11,6 @@ function ConsentItem({
   name,
   description,
   mandatory = false,
-  switchComponent: SwitchComponent,
 }: Readonly<ConsentItemProps>) {
   const { consent } = useConsent();
   const [consentCheck, setConsentCheck] = useState(consent.includes(id));
@@ -19,11 +19,11 @@ function ConsentItem({
     (e: React.ChangeEvent<HTMLInputElement>) => {
       const { name, type, checked } = e.target;
       setConsentCheck((prevState) =>
-        type === 'checkbox' ? !prevState : prevState
+        type === "checkbox" ? !prevState : prevState,
       );
       onChange(name, checked);
     },
-    [onChange]
+    [onChange],
   );
 
   return (
@@ -33,11 +33,7 @@ function ConsentItem({
         {mandatory ? (
           <span className={style.mandatory}>Always Active</span>
         ) : (
-          <SwitchComponent
-            name={id}
-            checked={consentCheck}
-            onChange={handleChange}
-          />
+          <Switch name={id} checked={consentCheck} onChange={handleChange} />
         )}
       </div>
       {description && <p className={style.description}>{description}</p>}
