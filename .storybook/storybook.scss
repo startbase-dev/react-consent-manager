@@ -23,7 +23,6 @@ body {
 }
 
 :root {
-  --background: white;
   --rcm-border-radius: 6px;
   --rcm-transparent: transparent;
   --rcm-text-color: #000;
@@ -39,6 +38,10 @@ body {
   --rcm-modal-bg: #fff6d2;
   --rcm-necessary-text-color: #00e317;
   --rcm-consent-item-border: #d6d6d6;
+  --rcm-switch-bg: #fafafa;
+  --rcm-switch-border: #ddd;
+  --rcm-switch-handle-bg: #fafafa;
+  --rcm-switch-checked-bg: #f0f0f0;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -46,7 +49,10 @@ body {
     --background: black;
     --rcm-text-color: #fff;
     --rcm-banner-bg: #59019c;
-    --rcm-modal-bg: #0c3761;
+    --rcm-modal-bg: #093c9b;
+    --rcm-switch-bg: #989898;
+    --rcm-switch-border: #4e4e4e;
+    --rcm-switch-handle-bg: #989898;
+    --rcm-switch-checked-bg: #606060;
   }
 }
-

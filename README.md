@@ -27,12 +27,15 @@
 </p>
 
 ## Documentation
+
 For full documentation, visit [start-ui.startbase.dev](https://start-ui.startbase.dev/docs/overlayComponents/consentManager).
 
 ## Installation
+
 ```bash title="Terminal"
 npm install --save @start-base/react-consent-manager
 ```
+
 Make sure to you import `style.css` to your App root.
 
 ```jsx title="layout.js"
@@ -40,14 +43,17 @@ import "@start-base/react-consent-manager/styles.css";
 ```
 
 ## Features
+
 - CSS variables for theming are available for all components.
 - Classnames are available for all components.
 - Built-in dark mode support.
 
 ## Demos
+
 For live demos of these components in action, please visit our [Storybook](https://react-consent-manager.vercel.app/) demo pages.
 
 ## Contributing
+
 Contributions are welcomed. Feel free to submit pull requests and improvements to the project!
 
 ## Contributors
