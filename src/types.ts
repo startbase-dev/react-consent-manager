@@ -26,6 +26,9 @@ export interface Service {
   description?: string;
   mandatory: boolean;
   scripts: Script[];
+  cookies?: [];
+  localStorage?: [];
+  sessionStorage?: [];
 }
 
 export interface ConsentState {

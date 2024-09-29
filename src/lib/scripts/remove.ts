@@ -1,7 +1,6 @@
-export function removeScripts(
-  serviceId: string,
-  scripts?: { id: string }[],
-): void {
+import { Script } from "../../types";
+
+export function removeScripts(serviceId: string, scripts?: Script[]): void {
   if (!scripts) {
     return;
   }
