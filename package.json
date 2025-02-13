@@ -44,8 +44,8 @@
   },
   "peerDependencies": {
     "clsx": "^2.0.0",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react": ">=17.0.0",
+    "react-dom": ">=17.0.0"
   },
   "dependencies": {
     "clsx": "^2.0.0",
@@ -69,6 +69,7 @@
     "@storybook/react-webpack5": "8.4.2",
     "@storybook/test": "8.4.2",
     "@types/md5": "2.3.5",
+    "@types/react": "^18.3.18",
     "@typescript-eslint/eslint-plugin": "8.13.0",
     "@typescript-eslint/parser": "8.13.0",
     "autoprefixer": "10.4.20",
