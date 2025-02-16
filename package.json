@@ -2,7 +2,7 @@
   "name": "@start-base/react-consent-manager",
   "author": "Start-Base",
   "description": "JavaScript library designed to simplify the management of user consents in web applications developed with React. This package is particularly useful for complying with data protection regulations such as the General Data Protection Regulation (GDPR) in the European Union and the California Consumer Privacy Act (CCPA) in the United States. It provides developers with a flexible and easy-to-integrate solution to handle user consents for cookies, tracking scripts, and other third-party services that require user approval before activation.",
-  "version": "1.12.0",
+  "version": "1.13.0",
   "license": "MIT",
   "repository": {
     "type": "git",
